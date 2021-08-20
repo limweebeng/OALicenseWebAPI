@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UserSecretsId>009487d4-b43a-4b1f-a22c-d0432300bc31</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DataShared">
+      <HintPath>..\SharedDLL\DataShared.dll</HintPath>
+    </Reference>
+    <Reference Include="Helper">
+      <HintPath>..\SharedDLL\Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="OA.AuthLibrary">
+      <HintPath>..\SharedDLL\OA.AuthLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+
+</Project>
