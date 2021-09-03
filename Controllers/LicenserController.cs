@@ -1,7 +1,6 @@
 ﻿using DataShared;
 using Helper;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -181,8 +180,7 @@ namespace OALicenseWebAPI.Controllers
         }
 
         //PUT api/licenser/table
-        [Route("table")]
-        [HttpPut("{tableName}")]
+        [HttpPut("table/{tableName}")]
         public ActionResult Put(string tableName, [FromBody] Dictionary<string, string> dicInput)
         {
             string json = "";

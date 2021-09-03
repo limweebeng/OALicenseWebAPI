@@ -402,8 +402,7 @@ namespace OALicenseWebAPI.Controllers
         }
 
         //Post api/license/user
-        [Route("user")]
-        [HttpPost("{isNew}")]
+        [HttpPost("user/{isNew}")]
         public ActionResult PostUser(string isNew, [FromBody] Dictionary<string, string> dicInput)
         {
             string json = "";
@@ -498,9 +497,8 @@ namespace OALicenseWebAPI.Controllers
         }
 
 
-        //Put api/license/table/tableName
-        [Route("table")]
-        [HttpPut("{tableName}")]
+        //Put api/license/table
+        [HttpPut("table/{tableName}")]
         public ActionResult PutTable(string tableName, [FromBody] Dictionary<string, string> dicInput)
         {
             string json = "";
@@ -675,8 +673,7 @@ namespace OALicenseWebAPI.Controllers
         }
 
         //Post api/license/scheme/isNew
-        [Route("scheme")]
-        [HttpPost("{isNew}")]
+        [HttpPost("scheme/{isNew}")]
         public ActionResult PostScheme(string isNew, [FromBody] Dictionary<string, string> dicInput)
         {
             string json = "";

@@ -364,7 +364,6 @@ namespace OALicenseWebAPI.Controllers
             {
                 string dbAutoPatchFilePath = null;
                 Dictionary<string, object> dicValue = null;
-                DateTime dt = DateTime.Now;
                 if (dicInput.ContainsKey("dbAutoPatchFilePath"))
                 {
                     dbAutoPatchFilePath = dicInput["dbAutoPatchFilePath"];
@@ -373,8 +372,9 @@ namespace OALicenseWebAPI.Controllers
                 if (dicInput.ContainsKey("dicValue"))
                 {
                     string dicValueTemp = dicInput["dicValue"];
-                    dicInput.Remove("dicValue");
                     dicValue = JsonConvert.DeserializeObject<Dictionary<string, object>>(dicValueTemp);
+                    dicInput.Remove("dicValue");
+                   
                 }
                 string errorCode = "";
                 if (dbAutoPatchFilePath != null && dicValue != null)
@@ -402,8 +402,7 @@ namespace OALicenseWebAPI.Controllers
 
 
         //Post api/patch/maintenance
-        [Route("maintenance")]
-        [HttpPost("{isNew}")]
+        [HttpPost("maintenance/{isNew}")]
         public ActionResult PostMaintenance(string isNew,
             [FromBody] Dictionary<string, string> dicInput)
         {

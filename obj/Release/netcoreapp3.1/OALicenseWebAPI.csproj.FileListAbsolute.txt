@@ -17,7 +17,6 @@ C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\Utilities.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\DotNetZip.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\RestSharp.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\System.Data.SQLite.dll
-C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\OALicenseWebAPI.csprojAssemblyReference.cache
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\OALicenseWebAPI.AssemblyInfoInputs.cache
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\OALicenseWebAPI.AssemblyInfo.cs
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\OALicenseWebAPI.csproj.CoreCompileInputs.cache
