@@ -28,3 +28,4 @@ C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\OALicenseWebAPI.csproj.C
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\OALicenseWebAPI.dll
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\OALicenseWebAPI.pdb
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\OALicenseWebAPI.genruntimeconfig.cache
+C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\OALicenseWebAPI.csprojAssemblyReference.cache

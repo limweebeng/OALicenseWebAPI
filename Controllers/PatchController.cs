@@ -28,7 +28,7 @@ namespace OALicenseWebAPI.Controllers
         }
         #endregion
 
-        //Put api/patch
+        //Put api/put
         [HttpPut()]
         public ActionResult Put([FromBody] Dictionary<string, string> dicInput)
         {
