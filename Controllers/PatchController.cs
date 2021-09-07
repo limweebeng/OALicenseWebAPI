@@ -302,14 +302,14 @@ namespace OALicenseWebAPI.Controllers
                 }
                 if (dicInput.ContainsKey("colValue"))
                 {
-                    colName = dicInput["colValue"];
+                    colValue = dicInput["colValue"];
                     dicInput.Remove("colValue");
                 }
                 if (dicInput.ContainsKey("dicValue"))
                 {
                     string dicValueTemp = dicInput["dicValue"];
-                    dicInput.Remove("dicValue");
                     dicValue = JsonConvert.DeserializeObject<Dictionary<string, object>>(dicValueTemp);
+                    dicInput.Remove("dicValue");
                 }
 
                 string errorCode = "";
@@ -424,14 +424,14 @@ namespace OALicenseWebAPI.Controllers
                 if (dicInput.ContainsKey("dicValue"))
                 {
                     string dicValueTemp = dicInput["dicValue"];
-                    dicInput.Remove("dicValue");
                     dicValue = JsonConvert.DeserializeObject<Dictionary<string, object>>(dicValueTemp);
+                    dicInput.Remove("dicValue");
                 }
                 if (dicInput.ContainsKey("dtNow"))
                 {
                     string dtNowTemp = dicInput["dtNow"];
-                    dicInput.Remove("dtNow");
                     dtNow = JsonConvert.DeserializeObject<DateTime>(dtNowTemp);
+                    dicInput.Remove("dtNow");
                 }
                 if (dicInput.ContainsKey("userName"))
                 {

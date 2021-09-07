@@ -142,14 +142,14 @@ namespace OALicenseWebAPI.Controllers
                 if (dicInput.ContainsKey("dicColCond"))
                 {
                     string dicColCondTemp = dicInput["dicColCond"];
-                    dicInput.Remove("dicColCond");
                     dicColCond = JsonConvert.DeserializeObject<Dictionary<string, object>>(dicColCondTemp);
+                    dicInput.Remove("dicColCond");
                 }
                 if (dicInput.ContainsKey("dicValue"))
                 {
                     string dicValueTemp = dicInput["dicValue"];
-                    dicInput.Remove("dicValue");
                     dicValue = JsonConvert.DeserializeObject<Dictionary<string, object>>(dicValueTemp);
+                    dicInput.Remove("dicValue");
                 }
                 string errorCode = "";
                 if (dbLicenserFilePath != null && dicColCond != null && dicValue != null)

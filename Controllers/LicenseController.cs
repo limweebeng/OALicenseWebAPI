@@ -351,14 +351,14 @@ namespace OALicenseWebAPI.Controllers
                 if (dicInput.ContainsKey("dicColCond"))
                 {
                     string dicColCondTemp = dicInput["dicColCond"];
-                    dicInput.Remove("dicColCond");
                     dicColCond = JsonConvert.DeserializeObject<Dictionary<string, object>>(dicColCondTemp);
+                    dicInput.Remove("dicColCond");
                 }
                 if (dicInput.ContainsKey("dicValue"))
                 {
                     string dicValueTemp = dicInput["dicValue"];
-                    dicInput.Remove("dicValue");
                     dicValue = JsonConvert.DeserializeObject<Dictionary<string, object>>(dicValueTemp);
+                    dicInput.Remove("dicValue");
                 }
 
 
@@ -630,8 +630,8 @@ namespace OALicenseWebAPI.Controllers
                 if (dicInput.ContainsKey("dtGroup"))
                 {
                     string dtGroupTemp = dicInput["dtGroup"];
-                    dicInput.Remove("dtGroup");
                     dtGroup = JsonConvert.DeserializeObject<DataTable>(dtGroupTemp);
+                    dicInput.Remove("dtGroup");
                 }
 
                 string errorCode = "";
@@ -643,7 +643,7 @@ namespace OALicenseWebAPI.Controllers
                     {
                         if (dtGroup != null)
                         {
-                            SQLiteHelper.ModifyTable(dbFilePath, passCode, dtGroup, out errorCode);
+                            SQLiteHelper.ModifyTable(dbFilePath, passCode, dtGroup, LicenseData.Group, out errorCode);
                         }
                         else
                         {
