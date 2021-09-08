@@ -187,11 +187,12 @@ namespace OALicenseWebAPI.Controllers
                     planCode = dicInput["planCode"];
                     dicInput.Remove("planCode");
                 }
-                if (dicInput.ContainsKey("dataRowList"))
+                if (dicInput.ContainsKey("dataTable"))
                 {
-                    string dataRowListTemp = dicInput["dataRowList"];
-                    dicInput.Remove("dataRowList");
-                    dataRowList = JsonConvert.DeserializeObject<List<DataRow>>(dataRowListTemp);
+                    string dataTableTemp = dicInput["dataTable"];
+                    DataTable dt = JsonConvert.DeserializeObject<DataTable>(dataTableTemp);
+                    dataRowList = DataHelper.GetDataRowList(dt);
+                    dicInput.Remove("dataTable");
                 }
 
                 string errorCode = "";

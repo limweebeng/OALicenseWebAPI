@@ -93,8 +93,8 @@ namespace OALicenseWebAPI.Controllers
                 if (dicInput.ContainsKey("dtNow"))
                 {
                     string dtNowTemp = dicInput["dtNow"];
-                    dicInput.Remove("dtNow");
                     dtNow = JsonConvert.DeserializeObject<DateTime>(dtNowTemp);
+                    dicInput.Remove("dtNow");
                 }
                 string errorCode = "";
                 if (dbFilePath != null)
@@ -183,8 +183,8 @@ namespace OALicenseWebAPI.Controllers
                 if (dicInput.ContainsKey("dtSelected"))
                 {
                     string dtSelectedTemp = dicInput["dtSelected"];
-                    dicInput.Remove("dtSelected");
                     dtSelected = JsonConvert.DeserializeObject<DataTable>(dtSelectedTemp);
+                    dicInput.Remove("dtSelected");
                 }
                 if (dbFilePath != null)
                 {
@@ -425,8 +425,8 @@ namespace OALicenseWebAPI.Controllers
                 if (dicInput.ContainsKey("dicOut"))
                 {
                     string dicOutTemp = dicInput["dicOut"];
-                    dicInput.Remove("dicOut");
                     dicOut = JsonConvert.DeserializeObject<Dictionary<string, object>>(dicOutTemp);
+                    dicInput.Remove("dicOut");
                 }
                 if (dicInput.ContainsKey("colCond"))
                 {
