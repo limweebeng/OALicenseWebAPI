@@ -65,14 +65,15 @@ namespace OALicenseWebAPI.Controllers
                         {
                             if (tableName == "all")
                             {
-                                string json1 = JsonConvert.SerializeObject(dataSet);
+                                string json1 = DataHelper.GetJsonDataSet(dataSet);
                                 dicOut.Add("dataSet", json1);
                             }
                             else
                             {
                                 DataTable dt;
                                 dt = dataSet.Tables[tableName];
-                                string json1 = JsonConvert.SerializeObject(dt);
+                                
+                                string json1 = DataHelper.GetJsonTable(dt);
                                 dicOut.Add(tableName, json1);
                             }
                         }
@@ -98,8 +99,6 @@ namespace OALicenseWebAPI.Controllers
                 return BadRequest(errorLog);
         }
 
-        // Test
-        //PUT api/applicenser
         [HttpPatch()]
         public ActionResult Patch([FromBody] Dictionary<string, string> dicInput)
         {

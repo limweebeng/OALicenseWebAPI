@@ -141,7 +141,7 @@ namespace OALicenseWebAPI.Controllers
                         if (userRow != null)
                         {
                             DataTable dt = DataHelper.ConvertDT(userRow);
-                            string dtTemp = JsonConvert.SerializeObject(dt);
+                            string dtTemp = DataHelper.GetJsonTable(dt);
                             dicOutput.Add("userRow", dtTemp);
                         }
                     }

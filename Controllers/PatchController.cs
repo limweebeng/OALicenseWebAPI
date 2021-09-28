@@ -65,7 +65,7 @@ namespace OALicenseWebAPI.Controllers
                             if (patchRow != null)
                             {
                                 DataTable dt = DataHelper.ConvertDT(patchRow);
-                                string json1 = JsonConvert.SerializeObject(dt);
+                                string json1 = DataHelper.GetJsonTable(dt);
                                 dicOut.Add("patchRow", json1);
                             }
                         }
@@ -125,7 +125,7 @@ namespace OALicenseWebAPI.Controllers
                         {
                             if (tableName == "all")
                             {
-                                string dsTemp = JsonConvert.SerializeObject(dataSet);
+                                string dsTemp = DataHelper.GetJsonDataSet(dataSet);
                                 dicOut.Add("dataSet", dsTemp);
                             }
                             else
@@ -133,7 +133,7 @@ namespace OALicenseWebAPI.Controllers
                                 if (dataSet.Tables.Contains(tableName))
                                 {
                                     DataTable dtTemp = dataSet.Tables[tableName];
-                                    string dataTable = JsonConvert.SerializeObject(dtTemp);
+                                    string dataTable = DataHelper.GetJsonTable(dtTemp);
                                     dicOut.Add(tableName, dataTable);
                                 }
                             }

@@ -523,7 +523,7 @@ namespace OALicenseWebAPI.Controllers
                         {
                             if (tableName == "all")
                             {
-                                string dsTemp = JsonConvert.SerializeObject(ds);
+                                string dsTemp = DataHelper.GetJsonDataSet(ds);
                                 dicOut.Add("dataSet", dsTemp);
                             }
                             else
@@ -531,7 +531,7 @@ namespace OALicenseWebAPI.Controllers
                                 DataTable dt = ds.Tables[tableName];
                                 if (dt != null)
                                 {
-                                    string dtTemp = JsonConvert.SerializeObject(dt);
+                                    string dtTemp = DataHelper.GetJsonTable(dt);
                                     dicOut.Add(tableName, dtTemp);
                                 }
                             }
@@ -586,7 +586,7 @@ namespace OALicenseWebAPI.Controllers
                            passCode, LicenseData.Group, out errorCode);
                     if (errorCode == "" && dtGroup != null)
                     {
-                        string json1 = JsonConvert.SerializeObject(dtGroup);
+                        string json1 = DataHelper.GetJsonTable(dtGroup);
                         dicOut.Add("dtGroup", json1);
                     }
                 }
@@ -881,7 +881,7 @@ namespace OALicenseWebAPI.Controllers
                             passCode, LicenseData.Scheme, out errorCode);
                     if (errorCode == "" && dtScheme != null)
                     {
-                        string json1 = JsonConvert.SerializeObject(dtScheme);
+                        string json1 = DataHelper.GetJsonTable(dtScheme);
                         dicOut.Add("dtScheme", json1);
                     }
                 }
