@@ -74,9 +74,11 @@ namespace OALicenseWebAPI.Controllers
                     { 
                         if (name != null && password != null)
                         {
+                            Dictionary<string, string> dicAuth = new Dictionary<string, string>();
+                            dicAuth.Add(LicenseData.UserName, name);
+                            dicAuth.Add(LicenseData.password, password);
                             dataRow = LicenserEngine.GetValidDataRow(dataTable,
-                                          name, password,
-                                          dtNow,
+                                          dicAuth, dtNow, false,
                                           out errorCode);
                         }
                         else

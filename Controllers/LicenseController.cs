@@ -1,7 +1,6 @@
 ﻿using DataShared;
 using Helper;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -9,9 +8,7 @@ using OA.AuthLibrary;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace OALicenseWebAPI.Controllers
 {
@@ -153,7 +150,7 @@ namespace OALicenseWebAPI.Controllers
         }
 
         //Delete api/license
-        [HttpDelete]
+        [HttpDelete()]
         public ActionResult Delete([FromBody] Dictionary<string, string> dicInput)
         {
             string json = "";
@@ -162,9 +159,10 @@ namespace OALicenseWebAPI.Controllers
             string colName = null;
             string colValue = null;
             DataTable dtSelected = null;
-            string errorCode = "";
+            bool isWebLicense = false;
             try
             {
+                string errorCode = "";
                 if (dicInput.ContainsKey("dbFilePath"))
                 {
                     dbFilePath = dicInput["dbFilePath"];
@@ -186,12 +184,20 @@ namespace OALicenseWebAPI.Controllers
                     dtSelected = JsonConvert.DeserializeObject<DataTable>(dtSelectedTemp);
                     dicInput.Remove("dtSelected");
                 }
+                if (dicInput.ContainsKey("webLicense"))
+                {
+                    string stWebLicense = dicInput["webLicense"];
+                    isWebLicense = stWebLicense == "1";
+                    dicInput.Remove("webLicense");
+                }
                 if (dbFilePath != null)
                 {
                     if (dtSelected != null)
                     {
                         AuthEngineHelper.DeleteDBUser(dbFilePath, passCode,
-                            dtSelected.AsEnumerable().ToList(), out errorCode);
+                            dtSelected.AsEnumerable().ToList(),
+                            isWebLicense,
+                            out errorCode);
                     }
                     else
                     {
