@@ -467,19 +467,53 @@ namespace OALicenseWebAPI.Controllers
                 Dictionary<string, string> dicOutput = new Dictionary<string, string>();
                 if (dbFilePath != null)
                 {
-                    if (IsNew)
+                    DataTable dataTable = SQLiteHelper.GetDataTable(dbFilePath,
+             passCode, LicenseData.usersTable,
+             out errorCode);
+                    if (errorCode == "" && dataTable != null)
                     {
-                        string objValue = AuthEngineHelper.AddLicenseUser(dbFilePath,
-                                            passCode, colCond, colValueCond, infoDic, dicOut, out errorCode);
-                        if (errorCode != "")
+                        bool webLicense = false;
+                        webLicense = dataTable.Columns.Contains(LicenseData.LicenseApprove);
+                        
+                        if (webLicense)
                         {
-                            dicOutput.Add("objValue", objValue);
+                            DateTime dtNow = DateTime.UtcNow;
+                            if (!dicOut.ContainsKey(LicenseData.modifiedDate))
+                                dicOut.Add(LicenseData.modifiedDate, dtNow);
+                            if (IsNew)
+                            {
+                                if (dicOut.ContainsKey(LicenseData.LicenseApprove))
+                                {
+                                    if (dicOut[LicenseData.LicenseApprove].ToString() == "1")
+                                    {
+                                        if (!dicOut.ContainsKey(LicenseData.LicenseIssue))
+                                            dicOut.Add(LicenseData.LicenseIssue, dtNow);
+                                    }
+                                }
+                            }
                         }
-                    }
-                    else
-                    {
-                        AuthEngineHelper.EditLicenseUser(dbFilePath,
-                                            passCode, stCols, stValues, dicOut, out errorCode);
+                        if (IsNew)
+                        {
+                            string objValue = AuthEngineHelper.AddLicenseUser(dbFilePath,
+                                                passCode, colCond, colValueCond, infoDic, dicOut, out errorCode);
+                            if (errorCode != "")
+                            {
+                                dicOutput.Add("objValue", objValue);
+                            }
+                        }
+                        else
+                        {
+                            if (webLicense)
+                            {
+                                AuthEngineHelper.EditLicenseUser(dbFilePath,
+                                                   passCode, stCols, stValues, dicOut, dataTable, out errorCode);
+                            }
+                            else
+                            {
+                                AuthEngineHelper.EditLicenseUser(dbFilePath,
+                                                    passCode, stCols, stValues, dicOut, null, out errorCode);
+                            }
+                        }
                     }
                 }
                 else
@@ -501,7 +535,6 @@ namespace OALicenseWebAPI.Controllers
             else
                 return BadRequest(errorLog);
         }
-
 
         //Put api/license/table
         [HttpPut("table/{tableName}")]
@@ -566,7 +599,7 @@ namespace OALicenseWebAPI.Controllers
                 return BadRequest(errorLog);
         }
 
-
+ 
         //Put api/license/group
         [Route("group")]
         [HttpPut()]
