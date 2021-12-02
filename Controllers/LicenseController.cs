@@ -36,7 +36,6 @@ namespace OALicenseWebAPI.Controllers
             return Ok("Testing");
         }
 
-
         //Post api/license
         [HttpPost()]
         public ActionResult Post([FromBody] Dictionary<string, string> dicInput)
@@ -819,7 +818,6 @@ namespace OALicenseWebAPI.Controllers
             else
                 return BadRequest(errorLog);
         }
-
 
         //Put api/license/scheme
         [Route("scheme")]
