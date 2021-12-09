@@ -5,6 +5,6 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\publish\</_PublishTargetUrl>
-    <History>True|2021-12-02T04:57:08.5703431Z;</History>
+    <History>True|2021-12-09T03:26:53.6185839Z;True|2021-12-02T12:57:08.5703431+08:00;</History>
   </PropertyGroup>
 </Project>
