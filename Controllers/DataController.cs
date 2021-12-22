@@ -113,7 +113,7 @@ namespace OALicenseWebAPI.Controllers
             try
             {
                 Startup.ProgressDB = 0;
-                string dbFilePath = "C:\\inetpub\\ftproot";
+                string dbFilePath = "C:";
                 List<string> stList = filePath.Split('~').ToList();
                 foreach (string st in stList)
                 {

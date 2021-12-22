@@ -223,7 +223,6 @@ C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\dbgshim.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\hostfxr.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\hostpolicy.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\mscordaccore.dll
-C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\mscordaccore_amd64_amd64_4.700.20.51601.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\mscordbi.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\mscorrc.debug.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\mscorrc.dll
@@ -275,7 +274,6 @@ C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\cs\PresentationC
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\cs\PresentationFramework.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\cs\PresentationUI.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\cs\ReachFramework.resources.dll
-C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\cs\System.Printing.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\cs\System.Windows.Controls.Ribbon.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\cs\System.Windows.Forms.Design.Editors.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\cs\System.Windows.Forms.Design.resources.dll
@@ -292,7 +290,6 @@ C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\de\PresentationC
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\de\PresentationFramework.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\de\PresentationUI.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\de\ReachFramework.resources.dll
-C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\de\System.Printing.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\de\System.Windows.Controls.Ribbon.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\de\System.Windows.Forms.Design.Editors.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\de\System.Windows.Forms.Design.resources.dll
@@ -309,7 +306,6 @@ C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\es\PresentationC
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\es\PresentationFramework.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\es\PresentationUI.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\es\ReachFramework.resources.dll
-C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\es\System.Printing.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\es\System.Windows.Controls.Ribbon.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\es\System.Windows.Forms.Design.Editors.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\es\System.Windows.Forms.Design.resources.dll
@@ -326,7 +322,6 @@ C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\fr\PresentationC
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\fr\PresentationFramework.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\fr\PresentationUI.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\fr\ReachFramework.resources.dll
-C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\fr\System.Printing.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\fr\System.Windows.Controls.Ribbon.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\fr\System.Windows.Forms.Design.Editors.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\fr\System.Windows.Forms.Design.resources.dll
@@ -343,7 +338,6 @@ C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\it\PresentationC
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\it\PresentationFramework.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\it\PresentationUI.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\it\ReachFramework.resources.dll
-C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\it\System.Printing.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\it\System.Windows.Controls.Ribbon.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\it\System.Windows.Forms.Design.Editors.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\it\System.Windows.Forms.Design.resources.dll
@@ -360,7 +354,6 @@ C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ja\PresentationC
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ja\PresentationFramework.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ja\PresentationUI.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ja\ReachFramework.resources.dll
-C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ja\System.Printing.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ja\System.Windows.Controls.Ribbon.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ja\System.Windows.Forms.Design.Editors.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ja\System.Windows.Forms.Design.resources.dll
@@ -377,7 +370,6 @@ C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ko\PresentationC
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ko\PresentationFramework.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ko\PresentationUI.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ko\ReachFramework.resources.dll
-C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ko\System.Printing.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ko\System.Windows.Controls.Ribbon.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ko\System.Windows.Forms.Design.Editors.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ko\System.Windows.Forms.Design.resources.dll
@@ -394,7 +386,6 @@ C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\pl\PresentationC
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\pl\PresentationFramework.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\pl\PresentationUI.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\pl\ReachFramework.resources.dll
-C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\pl\System.Printing.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\pl\System.Windows.Controls.Ribbon.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\pl\System.Windows.Forms.Design.Editors.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\pl\System.Windows.Forms.Design.resources.dll
@@ -411,7 +402,6 @@ C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\pt-BR\Presentati
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\pt-BR\PresentationFramework.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\pt-BR\PresentationUI.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\pt-BR\ReachFramework.resources.dll
-C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\pt-BR\System.Printing.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\pt-BR\System.Windows.Controls.Ribbon.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\pt-BR\System.Windows.Forms.Design.Editors.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\pt-BR\System.Windows.Forms.Design.resources.dll
@@ -428,7 +418,6 @@ C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ru\PresentationC
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ru\PresentationFramework.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ru\PresentationUI.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ru\ReachFramework.resources.dll
-C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ru\System.Printing.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ru\System.Windows.Controls.Ribbon.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ru\System.Windows.Forms.Design.Editors.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\ru\System.Windows.Forms.Design.resources.dll
@@ -445,7 +434,6 @@ C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\tr\PresentationC
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\tr\PresentationFramework.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\tr\PresentationUI.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\tr\ReachFramework.resources.dll
-C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\tr\System.Printing.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\tr\System.Windows.Controls.Ribbon.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\tr\System.Windows.Forms.Design.Editors.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\tr\System.Windows.Forms.Design.resources.dll
@@ -462,7 +450,6 @@ C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\zh-Hans\Presenta
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\zh-Hans\PresentationFramework.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\zh-Hans\PresentationUI.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\zh-Hans\ReachFramework.resources.dll
-C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\zh-Hans\System.Printing.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\zh-Hans\System.Windows.Controls.Ribbon.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\zh-Hans\System.Windows.Forms.Design.Editors.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\zh-Hans\System.Windows.Forms.Design.resources.dll
@@ -479,7 +466,6 @@ C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\zh-Hant\Presenta
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\zh-Hant\PresentationFramework.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\zh-Hant\PresentationUI.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\zh-Hant\ReachFramework.resources.dll
-C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\zh-Hant\System.Printing.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\zh-Hant\System.Windows.Controls.Ribbon.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\zh-Hant\System.Windows.Forms.Design.Editors.resources.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\zh-Hant\System.Windows.Forms.Design.resources.dll
@@ -646,3 +632,6 @@ C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\win-x64\OALicenseWebAPI.
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\win-x64\OALicenseWebAPI.dll
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\win-x64\OALicenseWebAPI.pdb
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\win-x64\OALicenseWebAPI.genruntimeconfig.cache
+C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\win-x64\mscordaccore_amd64_amd64_4.700.21.51404.dll
+C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\win-x64\OALicenseWebAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\win-x64\OALicenseWebAPI.MvcApplicationPartsAssemblyInfo.cache

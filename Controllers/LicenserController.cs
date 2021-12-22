@@ -71,7 +71,7 @@ namespace OALicenseWebAPI.Controllers
                     DataTable dataTable = SQLiteHelper.GetDataTable(dbLicenserFilePath, passCode,
                         LicenseData.usersTable, out errorCode);
                     if (errorCode == "" && dataTable != null)
-                    { 
+                    {
                         if (name != null && password != null)
                         {
                             Dictionary<string, string> dicAuth = new Dictionary<string, string>();
@@ -100,7 +100,10 @@ namespace OALicenseWebAPI.Controllers
                         }
                     }
                     else
-                        errorCode = "err_invalidreqres";
+                    {
+                        if (errorCode == "")
+                            errorCode = "err_invalidreqres";
+                    }
                 }
                 else
                 {

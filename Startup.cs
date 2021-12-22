@@ -16,6 +16,7 @@ namespace OALicenseWebAPI
     public class Startup
     {
         public static int ProgressDB = 0;
+        public static int ProgressPatch = 0;
 
         public Startup(IConfiguration configuration)
         {

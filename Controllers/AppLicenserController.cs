@@ -152,5 +152,53 @@ namespace OALicenseWebAPI.Controllers
             else
                 return BadRequest(errorLog);
         }
+
+        [HttpPost()]
+        public ActionResult Post([FromBody] Dictionary<string, string> dicInput)
+        {
+            string json = "";
+            string errorLog = "";
+            try
+            {
+                string dbLicenserFilePath = null;
+                string compName = null;
+                if (dicInput.ContainsKey("dbLicenserFilePath"))
+                {
+                    dbLicenserFilePath = dicInput["dbLicenserFilePath"];
+                    dicInput.Remove("dbLicenserFilePath");
+                }
+                if (dicInput.ContainsKey("compName"))
+                {
+                    compName = dicInput["compName"];
+                    dicInput.Remove("compName");
+                }
+                Dictionary<string, string> dicOut = new Dictionary<string, string>();
+                string errorCode = "";
+                if (dbLicenserFilePath != null && compName != null)
+                {
+                    DataTable dt = SQLiteHelper.GetDataTable(dbLicenserFilePath, passCode,
+                   compName, out errorCode);
+                    string json1 = DataHelper.GetJsonTable(dt);
+                    dicOut.Add("dataTable", json1);
+                }
+                else
+                    errorCode = "err_invalidreqres";
+
+                dicOut.Add("errorCode", errorCode);
+                json = JsonConvert.SerializeObject(dicOut);
+            }
+            catch (Exception ex)
+            {
+                errorLog = ex.ToString();
+            }
+            finally
+            {
+
+            }
+            if (errorLog == "")
+                return Ok(json);
+            else
+                return BadRequest(errorLog);
+        }
     }
 }
