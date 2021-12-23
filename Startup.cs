@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -29,6 +30,20 @@ namespace OALicenseWebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers().AddNewtonsoftJson();
+
+            services.Configure<IISServerOptions>(options =>
+            {
+                options.MaxRequestBodySize = int.MaxValue;
+            });
+
+            services.Configure<FormOptions>(o =>  // currently all set to max, configure it to your needs!
+            {
+                o.ValueLengthLimit = int.MaxValue;
+                o.MultipartBodyLengthLimit = long.MaxValue; // <-- !!! long.MaxValue
+                o.MultipartBoundaryLengthLimit = int.MaxValue;
+                o.MultipartHeadersCountLimit = int.MaxValue;
+                o.MultipartHeadersLengthLimit = int.MaxValue;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +54,11 @@ namespace OALicenseWebAPI
                 app.UseDeveloperExceptionPage();
             }
 
+            app.Use(async (context, next) =>
+            {
+                context.Features.Get<IHttpMaxRequestBodySizeFeature>().MaxRequestBodySize = null; // unlimited I guess
+                await next.Invoke();
+            });
 
             app.UseHttpsRedirection();
 

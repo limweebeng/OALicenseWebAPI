@@ -479,6 +479,7 @@ namespace OALicenseWebAPI.Controllers
         }
 
         [HttpPost("upload/{filePath}")]
+        [DisableRequestSizeLimit]
         public async System.Threading.Tasks.Task<ActionResult> UploadPatchFile(string filePath, IFormFile file)
         {
             if (file == null || file.Length == 0)
@@ -491,6 +492,9 @@ namespace OALicenseWebAPI.Controllers
             try
             {
                 Startup.ProgressPatch = 0;
+                if (filePath.Contains("~~"))
+                    filePath = filePath.Replace("~~", ".");
+
                 string filePathTemp = "C:";
                 List<string> stList = filePath.Split('~').ToList();
                 foreach (string st in stList)
@@ -516,9 +520,9 @@ namespace OALicenseWebAPI.Controllers
                         {
                             await output.WriteAsync(buffer, 0, readBytes);
                             totalReadBytes += readBytes;
-                            int progress = (int)((float)totalReadBytes / (float)totalBytes * 100.0);
-                            Startup.ProgressPatch = progress;
-                            await System.Threading.Tasks.Task.Delay(100);
+                            int progress = (int)((float)totalReadBytes * 100 / (float)totalBytes);
+                            if (Startup.ProgressPatch != progress && progress > Startup.ProgressPatch)
+                                Startup.ProgressPatch = progress;
                         }
                     }
                 }
@@ -704,43 +708,43 @@ namespace OALicenseWebAPI.Controllers
                 return BadRequest(errorLog);
         }
 
-        [HttpGet("directoryList/{directoryPath}")]
-        public ActionResult GetDirectoryList(string directoryPath)
-        {
-            string errorLog = "";
-            string json = "";
-            try
-            {
-                List<string> stList = directoryPath.Split('~').ToList();
-                string directoryPathTemp = "C:";
-                foreach (string st in stList)
-                {
-                    directoryPathTemp = Path.Combine(directoryPathTemp, st);
-                }
+        //[HttpGet("directoryList/{directoryPath}")]
+        //public ActionResult GetDirectoryList(string directoryPath)
+        //{
+        //    string errorLog = "";
+        //    string json = "";
+        //    try
+        //    {
+        //        List<string> stList = directoryPath.Split('~').ToList();
+        //        string directoryPathTemp = "C:";
+        //        foreach (string st in stList)
+        //        {
+        //            directoryPathTemp = Path.Combine(directoryPathTemp, st);
+        //        }
 
-                if (directoryPathTemp != null)
-                {
-                    List<string> stList1 = Directory.GetDirectories(directoryPathTemp).ToList();
-                    string stList2 = JsonConvert.SerializeObject(stList1);
-                    Dictionary<string, string> dicOut = new Dictionary<string, string>();
-                    dicOut.Add("directoryList", stList2);
-                    json = JsonConvert.SerializeObject(dicOut);
-                }
-            }
-            catch (Exception ex)
-            {
-                errorLog = ex.ToString();
-            }
-            finally
-            {
+        //        if (directoryPathTemp != null)
+        //        {
+        //            List<string> stList1 = Directory.GetDirectories(directoryPathTemp).ToList();
+        //            string stList2 = JsonConvert.SerializeObject(stList1);
+        //            Dictionary<string, string> dicOut = new Dictionary<string, string>();
+        //            dicOut.Add("directoryList", stList2);
+        //            json = JsonConvert.SerializeObject(dicOut);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        errorLog = ex.ToString();
+        //    }
+        //    finally
+        //    {
 
-            }
+        //    }
 
-            if (errorLog == "")
-                return Ok(json);
-            else
-                return BadRequest(errorLog);
-        }
+        //    if (errorLog == "")
+        //        return Ok(json);
+        //    else
+        //        return BadRequest(errorLog);
+        //}
 
         [HttpPut("deleteFiles")]
         public ActionResult DeleteFiles([FromBody] Dictionary<string, string> dicInput)

@@ -21,8 +21,6 @@ C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\OALicenseWebAPI.Assembly
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\OALicenseWebAPI.AssemblyInfo.cs
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\OALicenseWebAPI.csproj.CoreCompileInputs.cache
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\staticwebassets\OALicenseWebAPI.StaticWebAssets.Manifest.cache
-C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\staticwebassets\OALicenseWebAPI.StaticWebAssets.xml
-C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\scopedcss\bundle\OALicenseWebAPI.styles.css
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\OALicenseWebAPI.RazorTargetAssemblyInfo.cache
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\OALicenseWebAPI.csproj.CopyComplete
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\OALicenseWebAPI.dll
