@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7+KdHs7e1sxfkjy5UILeRlchBJeYXpFpcRskaQnlA+dcd3M/ud90nDMf8z5OsYaTgSChN36zbmjn7FnU/3qjYw==",
+  "dgSpecHash": "JKCrkwImJmM2rfQ24fZcEcVlVVKVXTfn2DhbmZKKcAfKIBK158kUyXuYSJL7Fq398lmuWOY5FdNHhWKEMEk2cg==",
   "success": true,
   "projectFilePath": "C:\\OA\\OA Code\\OALicenseWebAPI\\OALicenseWebAPI.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,8 @@
     "C:\\Users\\LIM\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.17\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.17.nupkg.sha512",
     "C:\\Users\\LIM\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\LIM\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
-    "C:\\Users\\LIM\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+    "C:\\Users\\LIM\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "C:\\Users\\LIM\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
   ],
   "logs": []
 }

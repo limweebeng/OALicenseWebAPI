@@ -22,12 +22,12 @@ namespace OALicenseWebAPI
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseContentRoot(Directory.GetCurrentDirectory());
+                    webBuilder.UseIISIntegration();
                     webBuilder.ConfigureKestrel(options =>
                     {
                         options.Limits.MaxRequestBodySize = long.MaxValue;
                     })
                     .UseStartup<Startup>();
-                    webBuilder.UseIISIntegration();
                 });
     }
 }

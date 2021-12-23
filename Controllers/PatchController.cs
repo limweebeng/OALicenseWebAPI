@@ -491,7 +491,6 @@ namespace OALicenseWebAPI.Controllers
             string errorLog = "";
             try
             {
-                Startup.ProgressPatch = 0;
                 if (filePath.Contains("~~"))
                     filePath = filePath.Replace("~~", ".");
 
@@ -499,6 +498,13 @@ namespace OALicenseWebAPI.Controllers
                 List<string> stList = filePath.Split('~').ToList();
                 foreach (string st in stList)
                     filePathTemp = Path.Combine(filePathTemp, st);
+
+                string fileName1 = Path.GetFileNameWithoutExtension(filePathTemp);
+                if (!Startup.ProgressPatchDic.ContainsKey(fileName1))
+                {
+                    Startup.ProgressPatchDic.Add(fileName1, 0);
+                }
+                Startup.ProgressPatchDic[fileName1] = 0;
 
                 long totalBytes = file.Length;
                 ContentDispositionHeaderValue contentDispositionHeaderValue =
@@ -521,11 +527,15 @@ namespace OALicenseWebAPI.Controllers
                             await output.WriteAsync(buffer, 0, readBytes);
                             totalReadBytes += readBytes;
                             int progress = (int)((float)totalReadBytes * 100 / (float)totalBytes);
-                            if (Startup.ProgressPatch != progress && progress > Startup.ProgressPatch)
-                                Startup.ProgressPatch = progress;
+                            if (Startup.ProgressPatchDic[fileName1] != progress && progress > Startup.ProgressPatchDic[fileName1])
+                            {
+                                Startup.ProgressPatchDic[fileName1] = progress;
+                                await System.Threading.Tasks.Task.Delay(100);
+                            }
                         }
                     }
                 }
+                Startup.ProgressPatchDic.Remove(fileName1);
             }
             catch (Exception ex)
             {
@@ -542,10 +552,21 @@ namespace OALicenseWebAPI.Controllers
                 return BadRequest(errorLog);
         }
 
-        [HttpGet("patchProgress")]
-        public ActionResult ProgressPatch()
+        [HttpGet("patchProgress/{filePath}")]
+        public ActionResult ProgressPatch(string filePath)
         {
-            int progress = Startup.ProgressPatch;
+            if (filePath.Contains("~~"))
+                filePath = filePath.Replace("~~", ".");
+
+            string filePathTemp = "C:";
+            List<string> stList = filePath.Split('~').ToList();
+            foreach (string st in stList)
+                filePathTemp = Path.Combine(filePathTemp, st);
+
+            string fileName1 = Path.GetFileNameWithoutExtension(filePathTemp);
+            int progress = 0;
+            if (Startup.ProgressPatchDic.ContainsKey(fileName1))
+                progress = Startup.ProgressPatchDic[fileName1];
             return Content(progress.ToString());
         }
 

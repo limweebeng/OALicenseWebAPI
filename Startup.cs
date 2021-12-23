@@ -16,8 +16,8 @@ namespace OALicenseWebAPI
 {
     public class Startup
     {
-        public static int ProgressDB = 0;
-        public static int ProgressPatch = 0;
+        public static Dictionary<string, int> ProgressDBDic = new Dictionary<string, int>();
+        public static Dictionary<string, int> ProgressPatchDic = new Dictionary<string, int>();
 
         public Startup(IConfiguration configuration)
         {

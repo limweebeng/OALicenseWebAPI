@@ -18,7 +18,6 @@ namespace OALicenseWebAPI.Controllers
     {
         private IWebHostEnvironment _hostingEnvironment;
         private ILogger<DataController> _logger;
-        private readonly string passCode = DataShared.Properties.Resources.licenser;
 
         #region Constructor
         public DataController(IWebHostEnvironment environment,
@@ -101,6 +100,7 @@ namespace OALicenseWebAPI.Controllers
         }
 
         [HttpPost("db/{filePath}")]
+        [DisableRequestSizeLimit]
         public async System.Threading.Tasks.Task<ActionResult> UploadDBWebEx(string filePath, IFormFile file)
         {
             if (file == null || file.Length == 0)
@@ -112,13 +112,20 @@ namespace OALicenseWebAPI.Controllers
             string errorLog = "";
             try
             {
-                Startup.ProgressDB = 0;
+                if (filePath.Contains("~~"))
+                    filePath = filePath.Replace("~~", ".");
+
                 string dbFilePath = "C:";
                 List<string> stList = filePath.Split('~').ToList();
                 foreach (string st in stList)
-                {
                     dbFilePath = Path.Combine(dbFilePath, st);
+
+                string fileName1 = Path.GetFileNameWithoutExtension(dbFilePath);
+                if (!Startup.ProgressDBDic.ContainsKey(fileName1))
+                {
+                    Startup.ProgressDBDic.Add(fileName1, 0);
                 }
+                Startup.ProgressDBDic[fileName1] = 0;
 
                 long totalBytes = file.Length;
                 ContentDispositionHeaderValue contentDispositionHeaderValue =
@@ -137,10 +144,14 @@ namespace OALicenseWebAPI.Controllers
                         {
                             await output.WriteAsync(buffer, 0, readBytes);
                             totalReadBytes += readBytes;
-                            int progress = (int)((float)totalReadBytes / (float)totalBytes * 100.0);
-                            Startup.ProgressDB = progress;
-                            await System.Threading.Tasks.Task.Delay(100);
+                            int progress = (int)((float)totalReadBytes * 100 / (float)totalBytes);
+                            if (Startup.ProgressDBDic[fileName1] != progress && progress > Startup.ProgressDBDic[fileName1])
+                            {
+                                Startup.ProgressDBDic[fileName1] = progress;
+                                await System.Threading.Tasks.Task.Delay(100);
+                            }
                         }
+                        Startup.ProgressDBDic.Remove(fileName1);
                     }
                 }
             }
@@ -159,10 +170,22 @@ namespace OALicenseWebAPI.Controllers
                 return BadRequest(errorLog);
         }
 
-        [HttpGet("dbProgress")]
-        public ActionResult ProgressDB()
+        [HttpGet("dbProgress/{filePath}")]
+        public ActionResult ProgressDB(string filePath)
         {
-            int progress = Startup.ProgressDB;
+            if (filePath.Contains("~~"))
+                filePath = filePath.Replace("~~", ".");
+
+            string filePathTemp = "C:";
+            List<string> stList = filePath.Split('~').ToList();
+            foreach (string st in stList)
+                filePathTemp = Path.Combine(filePathTemp, st);
+            
+            string fileName1 = Path.GetFileNameWithoutExtension(filePathTemp);
+            int progress = 0;
+            if (Startup.ProgressDBDic.ContainsKey(fileName1))
+                progress = Startup.ProgressPatchDic[fileName1];
+
             return Content(progress.ToString());
         }
     }
