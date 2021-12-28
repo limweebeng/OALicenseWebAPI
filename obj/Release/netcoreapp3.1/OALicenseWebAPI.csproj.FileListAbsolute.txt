@@ -6,10 +6,7 @@ C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\OALicenseWebAPI.runtimec
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\OALicenseWebAPI.runtimeconfig.dev.json
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\OALicenseWebAPI.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\OALicenseWebAPI.pdb
-C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
-C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
-C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\DataShared.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\Helper.dll
 C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\OA.AuthLibrary.dll

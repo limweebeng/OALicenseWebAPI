@@ -375,12 +375,15 @@ namespace OALicenseWebAPI.Controllers
                                                  LicenseData.usersTable,
                                                  dicColCond, dicValue,
                                                  out errorCode);
-                    if (errorCode == "")
+                    if (planCode != null)
                     {
-                        SQLiteHelper.UpdateData(dbFilePath, passCode,
-                                           LicenseData.usersTable,
-                                           AppPatchEngine.planCode,
-                                           planCode, AppPatchEngine.planCode, "", out errorCode);
+                        if (errorCode == "")
+                        {
+                            SQLiteHelper.UpdateData(dbFilePath, passCode,
+                                               LicenseData.usersTable,
+                                               AppPatchEngine.planCode,
+                                               planCode, AppPatchEngine.planCode, "", out errorCode);
+                        }
                     }
                 }
                 else
