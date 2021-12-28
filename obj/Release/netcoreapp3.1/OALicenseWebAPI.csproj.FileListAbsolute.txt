@@ -26,3 +26,6 @@ C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\OALicenseWebAPI.genrunti
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\OALicenseWebAPI.csproj.AssemblyReference.cache
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\OALicenseWebAPI.GeneratedMSBuildEditorConfig.editorconfig
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\OALicenseWebAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\OA\OA Code\OALicenseWebAPI\bin\Release\netcoreapp3.1\Newtonsoft.Json.Bson.dll

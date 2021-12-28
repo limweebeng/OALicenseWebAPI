@@ -5,7 +5,10 @@ C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\PubTmp\Out\OALicenseWebA
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\PubTmp\Out\OALicenseWebAPI.deps.json
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\PubTmp\Out\OALicenseWebAPI.runtimeconfig.json
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\PubTmp\Out\OALicenseWebAPI.pdb
+C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.JsonPatch.dll
+C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\PubTmp\Out\Newtonsoft.Json.dll
+C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\PubTmp\Out\Newtonsoft.Json.Bson.dll
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\PubTmp\Out\DataShared.dll
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\PubTmp\Out\Helper.dll
 C:\OA\OA Code\OALicenseWebAPI\obj\Release\netcoreapp3.1\PubTmp\Out\OA.AuthLibrary.dll
